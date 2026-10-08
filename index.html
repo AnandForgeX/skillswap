@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SkillSwap — Student Skill Exchange Platform</title>
+  <title>SkillSwap — Student-to-Student Skill Exchange Platform</title>
   <meta name="description" content="SkillSwap connects college students to barter knowledge and skills. Linear-style peer learning network.">
 
   <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
@@ -151,7 +151,7 @@
   <!-- 1. NAVBAR (Linear / Vercel Minimalist Header)            -->
   <!-- ======================================================== -->
   <header class="sticky top-0 z-40 w-full bg-[#090D14]/90 backdrop-blur-md border-b border-[#1E2638]" id="main-header">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 h-14 flex items-center justify-between">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-14 flex items-center justify-between">
       
       <!-- Left: Hamburger & Clean Logo -->
       <div class="flex items-center gap-3">
@@ -196,10 +196,10 @@
   </header>
 
   <!-- ======================================================== -->
-  <!-- 3. HERO SECTION (Editorial, Mature, Linear Aesthetic)    -->
+  <!-- 2. HERO SECTION (Editorial, Mature, Linear Aesthetic)    -->
   <!-- ======================================================== -->
-  <section id="hero" class="relative pt-14 pb-16 md:pt-20 md:pb-24 border-b border-[#1E2638]">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center">
+  <section id="hero" class="relative pt-12 pb-16 md:pt-18 md:pb-22 border-b border-[#1E2638]">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
       
       <!-- Small Clean Pill -->
       <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-[#1E2638] bg-[#111622] text-xs font-medium text-slate-400 mb-6">
@@ -207,18 +207,18 @@
         Built for Student Communities
       </div>
 
-      <!-- Main Headline (Crisp white, controlled size, single cyan accent) -->
+      <!-- Main Headline -->
       <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white mb-4 leading-[1.12]">
         Share Skills. <span class="text-sky-400">Learn Together.</span><br class="hidden sm:inline" />
         Grow Together.
       </h1>
 
       <!-- Muted Subtitle -->
-      <p class="max-w-lg mx-auto text-sm sm:text-base text-slate-400 leading-relaxed mb-6 font-normal">
+      <p class="max-w-xl mx-auto text-sm sm:text-base text-slate-400 leading-relaxed mb-6 font-normal">
         SkillSwap connects college students who can teach what you want to learn — and learn what you already know.
       </p>
 
-      <!-- Minimal Skill Tags (Subtle, developer-oriented, no neon) -->
+      <!-- Minimal Skill Tags -->
       <div class="flex flex-wrap items-center justify-center gap-1.5 mb-8">
         <span class="text-[11px] font-mono text-slate-400 px-2 py-0.5 rounded border border-[#1E2638] bg-[#111622]">C++</span>
         <span class="text-slate-600">•</span>
@@ -231,8 +231,8 @@
         <span class="text-[11px] font-mono text-slate-400 px-2 py-0.5 rounded border border-[#1E2638] bg-[#111622]">Video Editing</span>
       </div>
 
-      <!-- CTA Buttons (Solid blue accent, no massive rainbow gradient) -->
-      <div class="flex flex-col sm:flex-row items-center justify-center gap-3 mb-14">
+      <!-- CTA Buttons -->
+      <div class="flex flex-col sm:row items-center justify-center gap-3 mb-12">
         <a href="#find-match" class="w-full sm:w-auto h-10 px-5 rounded-lg font-medium text-xs sm:text-sm text-white bg-sky-600 hover:bg-sky-500 active:bg-sky-700 transition-all duration-150 flex items-center justify-center gap-2 shadow-sm hover:-translate-y-0.5">
           <span>⚡</span> Find My Skill Match
         </a>
@@ -241,8 +241,8 @@
         </a>
       </div>
 
-      <!-- 7. HOW IT WORKS CARD (Structured Product Feature Section) -->
-      <div class="max-w-3xl mx-auto saas-card p-5 sm:p-6 text-left mb-12">
+      <!-- HOW IT WORKS CARD (Structured Product Feature Section) -->
+      <div class="saas-card p-5 sm:p-6 text-left mb-10">
         <div class="flex items-center justify-between mb-4 pb-3 border-b border-[#1E2638]">
           <span class="text-xs font-mono font-semibold uppercase tracking-wider text-slate-400 flex items-center gap-2">
             <span class="w-1.5 h-1.5 rounded-full bg-sky-400"></span>
@@ -251,42 +251,50 @@
           <span class="text-[11px] text-slate-500 font-mono">Mutual 2-Way Exchange</span>
         </div>
 
-        <!-- 4 Clean Cards -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 mb-4">
-          <div class="bg-[#161D2E] p-3.5 rounded-lg border border-[#1E2638]">
-            <div class="flex items-center justify-between mb-1.5">
-              <span class="text-[11px] font-mono text-slate-500 font-semibold">01</span>
-              <span class="text-xs font-mono text-sky-400">LIST</span>
+        <!-- 4 Uniform Step Cards -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3.5 mb-4">
+          <div class="bg-[#161D2E] p-4 rounded-lg border border-[#1E2638] h-full flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-2">
+                <span class="text-[11px] font-mono text-slate-500 font-semibold">01</span>
+                <span class="text-[10px] font-mono font-semibold px-1.5 py-0.5 rounded bg-[#111622] text-sky-400 border border-[#1E2638]">LIST</span>
+              </div>
+              <h4 class="text-xs font-semibold text-white mb-1">Share Your Skill</h4>
+              <p class="text-[11px] text-slate-400 leading-relaxed">Post what you can mentor and want to learn.</p>
             </div>
-            <h4 class="text-xs font-semibold text-white mb-0.5">Share Your Skill</h4>
-            <p class="text-[11px] text-slate-400 leading-tight">Post what you can mentor and want to learn.</p>
           </div>
 
-          <div class="bg-[#161D2E] p-3.5 rounded-lg border border-[#1E2638]">
-            <div class="flex items-center justify-between mb-1.5">
-              <span class="text-[11px] font-mono text-slate-500 font-semibold">02</span>
-              <span class="text-xs font-mono text-sky-400">MATCH</span>
+          <div class="bg-[#161D2E] p-4 rounded-lg border border-[#1E2638] h-full flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-2">
+                <span class="text-[11px] font-mono text-slate-500 font-semibold">02</span>
+                <span class="text-[10px] font-mono font-semibold px-1.5 py-0.5 rounded bg-[#111622] text-sky-400 border border-[#1E2638]">MATCH</span>
+              </div>
+              <h4 class="text-xs font-semibold text-white mb-1">Find a Match</h4>
+              <p class="text-[11px] text-slate-400 leading-relaxed">Algorithm spots reciprocal 2-way pairings.</p>
             </div>
-            <h4 class="text-xs font-semibold text-white mb-0.5">Find a Match</h4>
-            <p class="text-[11px] text-slate-400 leading-tight">Algorithm spots reciprocal 2-way pairings.</p>
           </div>
 
-          <div class="bg-[#161D2E] p-3.5 rounded-lg border border-[#1E2638]">
-            <div class="flex items-center justify-between mb-1.5">
-              <span class="text-[11px] font-mono text-slate-500 font-semibold">03</span>
-              <span class="text-xs font-mono text-sky-400">SWAP</span>
+          <div class="bg-[#161D2E] p-4 rounded-lg border border-[#1E2638] h-full flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-2">
+                <span class="text-[11px] font-mono text-slate-500 font-semibold">03</span>
+                <span class="text-[10px] font-mono font-semibold px-1.5 py-0.5 rounded bg-[#111622] text-sky-400 border border-[#1E2638]">SWAP</span>
+              </div>
+              <h4 class="text-xs font-semibold text-white mb-1">Exchange Skills</h4>
+              <p class="text-[11px] text-slate-400 leading-relaxed">Connect 1-on-1 for balanced peer study.</p>
             </div>
-            <h4 class="text-xs font-semibold text-white mb-0.5">Exchange Skills</h4>
-            <p class="text-[11px] text-slate-400 leading-tight">Connect 1-on-1 for balanced peer study.</p>
           </div>
 
-          <div class="bg-[#161D2E] p-3.5 rounded-lg border border-[#1E2638]">
-            <div class="flex items-center justify-between mb-1.5">
-              <span class="text-[11px] font-mono text-slate-500 font-semibold">04</span>
-              <span class="text-xs font-mono text-sky-400">GROW</span>
+          <div class="bg-[#161D2E] p-4 rounded-lg border border-[#1E2638] h-full flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-2">
+                <span class="text-[11px] font-mono text-slate-500 font-semibold">04</span>
+                <span class="text-[10px] font-mono font-semibold px-1.5 py-0.5 rounded bg-[#111622] text-sky-400 border border-[#1E2638]">GROW</span>
+              </div>
+              <h4 class="text-xs font-semibold text-white mb-1">Grow Together</h4>
+              <p class="text-[11px] text-slate-400 leading-relaxed">Earn reputation and master new topics.</p>
             </div>
-            <h4 class="text-xs font-semibold text-white mb-0.5">Grow Together</h4>
-            <p class="text-[11px] text-slate-400 leading-tight">Earn reputation and master new topics.</p>
           </div>
         </div>
 
@@ -308,23 +316,23 @@
         </div>
       </div>
 
-      <!-- Statistics Bar (Structured Linear Style) -->
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-3 max-w-3xl mx-auto pt-2">
-        <div class="saas-card p-3.5 text-center">
+      <!-- Statistics Bar (4 Equal Balanced Columns) -->
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-3.5 pt-1">
+        <div class="saas-card p-4 text-center h-full flex flex-col justify-center">
           <p class="text-2xl font-mono font-bold text-white mb-0.5" id="stat-students">0</p>
-          <p class="text-[11px] font-medium text-slate-400">Students</p>
+          <p class="text-xs font-medium text-slate-400">Active Students</p>
         </div>
-        <div class="saas-card p-3.5 text-center">
+        <div class="saas-card p-4 text-center h-full flex flex-col justify-center">
           <p class="text-2xl font-mono font-bold text-sky-400 mb-0.5" id="stat-skills">0</p>
-          <p class="text-[11px] font-medium text-slate-400">Skills Listed</p>
+          <p class="text-xs font-medium text-slate-400">Skills Listed</p>
         </div>
-        <div class="saas-card p-3.5 text-center">
+        <div class="saas-card p-4 text-center h-full flex flex-col justify-center">
           <p class="text-2xl font-mono font-bold text-slate-200 mb-0.5" id="stat-matches">0</p>
-          <p class="text-[11px] font-medium text-slate-400">Skill Matches</p>
+          <p class="text-xs font-medium text-slate-400">Skill Matches</p>
         </div>
-        <div class="saas-card p-3.5 text-center">
+        <div class="saas-card p-4 text-center h-full flex flex-col justify-center">
           <p class="text-2xl font-mono font-bold text-emerald-400 mb-0.5" id="stat-swaps">0</p>
-          <p class="text-[11px] font-medium text-slate-400">Completed Swaps</p>
+          <p class="text-xs font-medium text-slate-400">Completed Swaps</p>
         </div>
       </div>
 
@@ -332,32 +340,32 @@
   </section>
 
   <!-- ======================================================== -->
-  <!-- 11. DAILY SKILL TIP (Clean Editorial Callout)            -->
+  <!-- 3. DAILY SKILL TIP (Clean Editorial Callout)             -->
   <!-- ======================================================== -->
-  <section class="max-w-4xl mx-auto px-4 sm:px-6 my-10">
-    <div class="saas-card p-4 flex flex-col md:flex-row items-center justify-between gap-3 bg-[#111622]">
-      <div class="flex items-start sm:items-center gap-3">
-        <span class="w-7 h-7 rounded bg-[#161D2E] border border-[#1E2638] text-sky-400 flex items-center justify-center text-xs font-mono shrink-0">
+  <section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 my-8">
+    <div class="saas-card p-4 sm:p-5 flex flex-col md:flex-row items-center justify-between gap-4 bg-[#111622]">
+      <div class="flex items-center gap-3.5">
+        <span class="w-8 h-8 rounded-lg bg-[#161D2E] border border-[#1E2638] text-sky-400 flex items-center justify-center text-xs font-mono font-bold shrink-0">
           Tip
         </span>
         <div>
           <span class="text-[10px] font-mono text-slate-500 uppercase tracking-wider block" id="tip-category-badge">Peer Tutoring</span>
-          <p id="skill-tip-content" class="text-xs sm:text-sm text-slate-300 font-medium">
+          <p id="skill-tip-content" class="text-xs sm:text-sm text-slate-300 font-medium leading-relaxed">
             “Teaching someone else is one of the fastest ways to strengthen your own conceptual understanding.”
           </p>
         </div>
       </div>
-      <button id="btn-next-tip" class="px-2.5 py-1 text-xs font-medium rounded text-slate-400 hover:text-white bg-[#161D2E] hover:bg-[#1C253B] border border-[#1E2638] transition-colors shrink-0">
+      <button id="btn-next-tip" class="px-3 py-1.5 text-xs font-medium rounded-lg text-slate-300 hover:text-white bg-[#161D2E] hover:bg-[#1C253B] border border-[#1E2638] transition-colors shrink-0">
         Next Tip ➔
       </button>
     </div>
   </section>
 
   <!-- ======================================================== -->
-  <!-- 5. SMART SKILL MATCHING SECTION (MAIN FEATURE)          -->
+  <!-- 4. SMART SKILL MATCHING SECTION (MAIN FEATURE)           -->
   <!-- ======================================================== -->
   <section id="find-match" class="py-14 md:py-18 border-b border-[#1E2638] scroll-mt-14">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <!-- Section Header -->
       <div class="max-w-2xl mx-auto text-center mb-8">
@@ -372,7 +380,7 @@
 
       <!-- Match Query Form Container -->
       <div class="max-w-3xl mx-auto saas-card p-5 sm:p-6 mb-8">
-        <div class="grid grid-cols-1 md:grid-cols-5 gap-3 items-center">
+        <div class="grid grid-cols-1 md:grid-cols-5 gap-3.5 items-center">
           
           <!-- Input 1: I Can Teach -->
           <div class="md:col-span-2 space-y-1">
@@ -423,7 +431,7 @@
         </div>
 
         <!-- Presets and Run Button -->
-        <div class="mt-4 pt-3 border-t border-[#1E2638] flex flex-wrap items-center justify-between gap-2 text-xs">
+        <div class="mt-4 pt-3.5 border-t border-[#1E2638] flex flex-wrap items-center justify-between gap-2 text-xs">
           <div class="flex flex-wrap items-center gap-1.5">
             <span class="text-slate-500 text-[11px] font-mono">Demos:</span>
             <button type="button" class="preset-btn px-2 py-0.5 rounded bg-[#161D2E] hover:bg-[#1C253B] text-slate-300 border border-[#1E2638] text-[11px] font-mono transition-colors" data-teach="C++" data-learn="Video Editing">
@@ -454,10 +462,10 @@
   </section>
 
   <!-- ======================================================== -->
-  <!-- 2. EXPLORE SKILLS (Clean Campus Directory)               -->
+  <!-- 5. EXPLORE SKILLS (Clean Campus Directory)               -->
   <!-- ======================================================== -->
   <section id="explore" class="py-14 md:py-18 border-b border-[#1E2638] scroll-mt-14">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <!-- Section Header -->
       <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-6">
@@ -507,15 +515,15 @@
         </button>
       </div>
 
-      <!-- Students Grid -->
-      <div id="students-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"></div>
+      <!-- Students Grid (3-col Desktop, 2-col Tablet, 1-col Mobile) -->
+      <div id="students-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4.5"></div>
 
       <!-- Empty State for Search -->
       <div id="explore-empty-state" class="hidden text-center py-12 px-4 saas-card max-w-sm mx-auto">
         <span class="text-xs font-mono text-slate-500 block mb-1">0 RESULTS</span>
         <h3 class="text-sm font-semibold text-white mb-1">No matching students found</h3>
         <p class="text-xs text-slate-400 mb-3">Try searching a different skill or reset your filters.</p>
-        <button id="btn-clear-search" class="px-3 py-1.5 bg-[#161D2E] hover:bg-[#1C253B] text-slate-200 text-xs font-medium rounded border border-[#1E2638] transition-colors">
+        <button id="btn-clear-search" class="px-3 py-1.5 bg-[#161D2E] hover:bg-[#1C253B] text-slate-200 text-xs font-medium rounded-lg border border-[#1E2638] transition-colors">
           Reset Filter & Search
         </button>
       </div>
@@ -524,10 +532,10 @@
   </section>
 
   <!-- ======================================================== -->
-  <!-- 10. CAMPUS SKILL MAP / DISCOVERY (Linear Tech Graph)     -->
+  <!-- 6. CAMPUS SKILL MAP / DISCOVERY (Linear Tech Graph)      -->
   <!-- ======================================================== -->
   <section id="skill-discovery" class="py-14 md:py-18 border-b border-[#1E2638] scroll-mt-14">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <div class="max-w-2xl mx-auto text-center mb-8">
         <span class="text-[11px] font-mono text-sky-400 uppercase tracking-wider block mb-1">Topology</span>
@@ -541,10 +549,10 @@
 
       <!-- Structured Network Visualizer -->
       <div class="saas-card p-4 sm:p-6">
-        <div class="flex flex-col lg:flex-row items-center gap-6">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 items-stretch">
           
-          <!-- Graph Display Viewport -->
-          <div class="w-full lg:w-2/3 h-72 sm:h-80 bg-[#090D14] rounded-lg border border-[#1E2638] relative p-3 flex items-center justify-center overflow-hidden" id="skill-graph-viewport">
+          <!-- Graph Display Viewport (2 cols on desktop) -->
+          <div class="lg:col-span-2 h-[340px] bg-[#090D14] rounded-lg border border-[#1E2638] relative p-3 flex items-center justify-center overflow-hidden" id="skill-graph-viewport">
             
             <svg class="absolute inset-0 w-full h-full pointer-events-none" id="graph-svg-lines" xmlns="http://www.w3.org/2000/svg">
               <line x1="20%" y1="30%" x2="50%" y2="20%" stroke="#1E2638" stroke-width="1.5" stroke-dasharray="3 3" />
@@ -557,7 +565,7 @@
               <line x1="65%" y1="70%" x2="80%" y2="85%" stroke="#1E2638" stroke-width="1.5" />
             </svg>
 
-            <!-- Skill Nodes (Solid, clean developer tags) -->
+            <!-- Skill Nodes -->
             <div class="absolute top-[26%] left-[16%]">
               <button class="skill-node px-2.5 py-1 rounded bg-[#161D2E] hover:bg-[#1C253B] text-slate-300 hover:text-white border border-[#1E2638] text-xs font-mono font-medium transition-colors" data-skill="C++">
                 C++
@@ -605,70 +613,76 @@
             </div>
           </div>
 
-          <!-- Inspector Panel -->
-          <div class="w-full lg:w-1/3 bg-[#161D2E] rounded-lg p-4 border border-[#1E2638]" id="graph-detail-panel">
-            <div class="flex items-center justify-between mb-2 pb-2 border-b border-[#1E2638]">
-              <span class="text-[10px] font-mono uppercase text-slate-400">Node Inspector</span>
-              <span id="selected-skill-badge" class="px-2 py-0.2 rounded bg-[#111622] text-sky-400 border border-[#1E2638] text-[10px] font-mono font-medium">Programming</span>
+          <!-- Inspector Panel (1 col on desktop, matching 340px height) -->
+          <div class="lg:col-span-1 h-[340px] flex flex-col justify-between bg-[#161D2E] rounded-lg p-4 border border-[#1E2638]" id="graph-detail-panel">
+            <div>
+              <div class="flex items-center justify-between mb-2 pb-2 border-b border-[#1E2638]">
+                <span class="text-[10px] font-mono uppercase text-slate-400">Node Inspector</span>
+                <span id="selected-skill-badge" class="px-2 py-0.5 rounded bg-[#111622] text-sky-400 border border-[#1E2638] text-[10px] font-mono font-medium">Programming</span>
+              </div>
+
+              <h3 class="text-base font-bold text-white mb-1" id="selected-skill-title">Web Development</h3>
+              <p class="text-[11px] text-slate-400 mb-3 leading-snug line-clamp-2" id="selected-skill-desc">
+                HTML, CSS, JavaScript, React & modern responsive frontend fundamentals.
+              </p>
+
+              <div class="space-y-2 mb-3">
+                <div class="p-2 rounded bg-[#111622] border border-[#1E2638]">
+                  <p class="text-[10px] font-mono text-slate-500 uppercase mb-0.5">Teaching peers:</p>
+                  <div id="graph-teachers-list" class="text-xs text-slate-300 space-y-0.5 max-h-12 overflow-y-auto"></div>
+                </div>
+                <div class="p-2 rounded bg-[#111622] border border-[#1E2638]">
+                  <p class="text-[10px] font-mono text-slate-500 uppercase mb-0.5">Seeking peers:</p>
+                  <div id="graph-learners-list" class="text-xs text-slate-300 space-y-0.5 max-h-12 overflow-y-auto"></div>
+                </div>
+              </div>
             </div>
 
-            <h3 class="text-base font-bold text-white mb-1" id="selected-skill-title">Web Development</h3>
-            <p class="text-[11px] text-slate-400 mb-3 leading-snug" id="selected-skill-desc">
-              HTML, CSS, JavaScript, React & modern responsive frontend fundamentals.
-            </p>
-
-            <div class="space-y-2 mb-4">
-              <div class="p-2 rounded bg-[#111622] border border-[#1E2638]">
-                <p class="text-[10px] font-mono text-slate-500 uppercase mb-0.5">Teaching peers:</p>
-                <div id="graph-teachers-list" class="text-xs text-slate-300 space-y-0.5"></div>
-              </div>
-              <div class="p-2 rounded bg-[#111622] border border-[#1E2638]">
-                <p class="text-[10px] font-mono text-slate-500 uppercase mb-0.5">Seeking peers:</p>
-                <div id="graph-learners-list" class="text-xs text-slate-300 space-y-0.5"></div>
-              </div>
-            </div>
-
-            <button id="btn-graph-filter-explore" class="w-full py-1.5 rounded bg-sky-600 hover:bg-sky-500 text-white font-medium text-xs transition-colors">
+            <button id="btn-graph-filter-explore" class="w-full py-2 rounded-lg bg-sky-600 hover:bg-sky-500 text-white font-medium text-xs transition-colors shrink-0">
               Filter Directory For This Skill ➔
             </button>
           </div>
-        </div>
 
+        </div>
       </div>
 
     </div>
   </section>
 
   <!-- ======================================================== -->
-  <!-- 8 & 9. TRENDING SKILLS & LEADERBOARD                     -->
+  <!-- 7. TRENDING SKILLS & LEADERBOARD                         -->
   <!-- ======================================================== -->
   <section id="trending" class="py-14 md:py-18 border-b border-[#1E2638] scroll-mt-14">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 items-stretch">
         
         <!-- Left: Trending Skills -->
-        <div class="saas-card p-5">
-          <div class="flex items-center justify-between mb-2">
-            <h3 class="text-lg font-bold text-white">Trending Skills On Campus</h3>
-            <span class="text-[11px] font-mono text-slate-500">Live Demand</span>
+        <div class="saas-card p-5 sm:p-6 flex flex-col justify-between h-full">
+          <div>
+            <div class="flex items-center justify-between mb-1.5">
+              <h3 class="text-base sm:text-lg font-bold text-white">Trending Skills On Campus</h3>
+              <span class="text-[11px] font-mono text-slate-500">Live Demand</span>
+            </div>
+            <p class="text-xs text-slate-400 mb-4">
+              Dynamically aggregated from current student wishlist requests.
+            </p>
+            <div id="trending-skills-list" class="space-y-2.5"></div>
           </div>
-          <p class="text-xs text-slate-400 mb-4">
-            Dynamically aggregated from current student wishlist requests.
-          </p>
-          <div id="trending-skills-list" class="space-y-2.5"></div>
         </div>
 
         <!-- Right: Leaderboard -->
-        <div class="saas-card p-5">
-          <div class="flex items-center justify-between mb-2">
-            <h3 class="text-lg font-bold text-white">Top Skill Contributors</h3>
-            <span class="text-[11px] font-mono text-slate-500">Ranked by Swaps</span>
+        <div class="saas-card p-5 sm:p-6 flex flex-col justify-between h-full">
+          <div>
+            <div class="flex items-center justify-between mb-1.5">
+              <h3 class="text-base sm:text-lg font-bold text-white">Top Skill Contributors</h3>
+              <span class="text-[11px] font-mono text-slate-500">Ranked by Swaps</span>
+            </div>
+            <p class="text-xs text-slate-400 mb-4">
+              Recognizing dedicated students who mentor others and foster peer learning.
+            </p>
+            <div id="leaderboard-list" class="space-y-2.5"></div>
           </div>
-          <p class="text-xs text-slate-400 mb-4">
-            Recognizing dedicated students who mentor others and foster peer learning.
-          </p>
-          <div id="leaderboard-list" class="space-y-2.5"></div>
         </div>
 
       </div>
@@ -677,12 +691,12 @@
   </section>
 
   <!-- ======================================================== -->
-  <!-- 4. ADD YOUR SKILL (Clean Form)                          -->
+  <!-- 8. ADD YOUR SKILL (Clean Form)                           -->
   <!-- ======================================================== -->
   <section id="add-skill" class="py-14 md:py-18 border-b border-[#1E2638] scroll-mt-14">
-    <div class="max-w-2xl mx-auto px-4 sm:px-6">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <div class="text-center mb-8">
+      <div class="max-w-2xl mx-auto text-center mb-8">
         <span class="text-[11px] font-mono text-sky-400 uppercase tracking-wider block mb-1">Registration</span>
         <h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-white mb-2">
           Add Your Skill
@@ -692,8 +706,8 @@
         </p>
       </div>
 
-      <!-- Add Skill Form Card -->
-      <div class="saas-card p-5 sm:p-6">
+      <!-- Add Skill Form Card (Centered, max-w-3xl) -->
+      <div class="max-w-3xl mx-auto saas-card p-5 sm:p-7">
         <form id="add-skill-form" novalidate class="space-y-4">
           
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
@@ -832,7 +846,7 @@
             <button 
               type="submit" 
               id="btn-add-student-submit" 
-              class="w-full sm:w-auto px-5 py-2 rounded-lg font-medium text-xs text-white bg-sky-600 hover:bg-sky-500 active:bg-sky-700 transition-colors shadow-sm"
+              class="w-full sm:w-auto px-5 py-2.5 rounded-lg font-medium text-xs text-white bg-sky-600 hover:bg-sky-500 active:bg-sky-700 transition-colors shadow-sm"
             >
               Add to SkillSwap
             </button>
@@ -845,10 +859,10 @@
   </section>
 
   <!-- ======================================================== -->
-  <!-- 7. MY DASHBOARD (Clean Linear / Vercel Hub)              -->
+  <!-- 9. MY DASHBOARD (Clean Linear / Vercel Hub)              -->
   <!-- ======================================================== -->
   <section id="dashboard" class="py-14 md:py-18 border-b border-[#1E2638] scroll-mt-14">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <div class="flex flex-col md:flex-row md:items-end justify-between gap-3 mb-6">
         <div>
@@ -861,50 +875,50 @@
           </p>
         </div>
 
-        <button id="btn-reset-data" class="self-start md:self-end px-2.5 py-1.5 rounded bg-[#161D2E] hover:bg-rose-950/40 text-slate-400 hover:text-rose-300 text-xs font-mono border border-[#1E2638] transition-colors">
+        <button id="btn-reset-data" class="self-start md:self-end px-3 py-1.5 rounded-lg bg-[#161D2E] hover:bg-rose-950/40 text-slate-400 hover:text-rose-300 text-xs font-mono border border-[#1E2638] transition-colors">
           Reset Demo Data
         </button>
       </div>
 
-      <!-- Overview Cards -->
-      <div class="grid grid-cols-2 md:grid-cols-5 gap-3 mb-6">
-        <div class="saas-card p-3.5">
-          <p class="text-[11px] font-mono uppercase text-slate-400 mb-0.5">My Skills</p>
-          <p class="text-xl font-mono font-bold text-white" id="dash-my-skills">1</p>
+      <!-- Overview Cards (5 Uniform Compact Cards) -->
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3.5 mb-6">
+        <div class="saas-card p-4 h-full flex flex-col justify-between">
+          <p class="text-[11px] font-mono uppercase text-slate-400 mb-1">My Skills</p>
+          <p class="text-2xl font-mono font-bold text-white" id="dash-my-skills">1</p>
         </div>
-        <div class="saas-card p-3.5">
-          <p class="text-[11px] font-mono uppercase text-slate-400 mb-0.5">Skills I Want</p>
-          <p class="text-xl font-mono font-bold text-white" id="dash-skills-want">1</p>
+        <div class="saas-card p-4 h-full flex flex-col justify-between">
+          <p class="text-[11px] font-mono uppercase text-slate-400 mb-1">Skills I Want</p>
+          <p class="text-2xl font-mono font-bold text-white" id="dash-skills-want">1</p>
         </div>
-        <div class="saas-card p-3.5 border-amber-900/30">
-          <p class="text-[11px] font-mono uppercase text-amber-400 mb-0.5">Pending</p>
-          <p class="text-xl font-mono font-bold text-amber-300" id="dash-pending-count">0</p>
+        <div class="saas-card p-4 border-amber-900/40 h-full flex flex-col justify-between">
+          <p class="text-[11px] font-mono uppercase text-amber-400 mb-1">Pending</p>
+          <p class="text-2xl font-mono font-bold text-amber-300" id="dash-pending-count">0</p>
         </div>
-        <div class="saas-card p-3.5 border-sky-900/30">
-          <p class="text-[11px] font-mono uppercase text-sky-400 mb-0.5">Accepted</p>
-          <p class="text-xl font-mono font-bold text-sky-300" id="dash-accepted-count">0</p>
+        <div class="saas-card p-4 border-sky-900/40 h-full flex flex-col justify-between">
+          <p class="text-[11px] font-mono uppercase text-sky-400 mb-1">Accepted</p>
+          <p class="text-2xl font-mono font-bold text-sky-300" id="dash-accepted-count">0</p>
         </div>
-        <div class="saas-card p-3.5 border-emerald-900/30 col-span-2 md:col-span-1">
-          <p class="text-[11px] font-mono uppercase text-emerald-400 mb-0.5">Completed</p>
-          <p class="text-xl font-mono font-bold text-emerald-300" id="dash-completed-count">0</p>
+        <div class="saas-card p-4 border-emerald-900/40 col-span-2 sm:col-span-1 h-full flex flex-col justify-between">
+          <p class="text-[11px] font-mono uppercase text-emerald-400 mb-1">Completed</p>
+          <p class="text-2xl font-mono font-bold text-emerald-300" id="dash-completed-count">0</p>
         </div>
       </div>
 
       <!-- My Active Swaps Feed -->
-      <div class="saas-card p-5">
-        <div class="flex items-center justify-between mb-4 pb-2 border-b border-[#1E2638]">
+      <div class="saas-card p-5 sm:p-6">
+        <div class="flex items-center justify-between mb-4 pb-3 border-b border-[#1E2638]">
           <h3 class="text-sm font-bold text-white font-mono uppercase">
             Active Swaps
           </h3>
           <span class="text-xs text-slate-500 font-mono">Session queue</span>
         </div>
 
-        <div id="active-swaps-container" class="space-y-2.5"></div>
+        <div id="active-swaps-container" class="space-y-3"></div>
 
         <div id="swaps-empty-state" class="hidden text-center py-8 px-4 bg-[#090D14] rounded-lg border border-[#1E2638]">
           <h4 class="text-xs font-semibold text-white mb-0.5">No skill swaps yet</h4>
           <p class="text-xs text-slate-400 mb-3">Initiate your first skill exchange through Smart Match.</p>
-          <a href="#find-match" class="inline-flex items-center px-3 py-1.5 rounded bg-sky-600 hover:bg-sky-500 text-white text-xs font-medium transition-colors">
+          <a href="#find-match" class="inline-flex items-center px-3.5 py-1.5 rounded-lg bg-sky-600 hover:bg-sky-500 text-white text-xs font-medium transition-colors">
             Find Matches
           </a>
         </div>
@@ -914,10 +928,10 @@
   </section>
 
   <!-- ======================================================== -->
-  <!-- FOOTER                                                   -->
+  <!-- 10. FOOTER                                               -->
   <!-- ======================================================== -->
   <footer class="py-8 bg-[#090D14]">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex flex-col md:flex-row items-center justify-between gap-4">
         
         <div class="flex items-center gap-2">
@@ -946,7 +960,7 @@
   </footer>
 
   <!-- ======================================================== -->
-  <!-- 3. STUDENT PROFILE MODAL                                 -->
+  <!-- STUDENT PROFILE MODAL                                    -->
   <!-- ======================================================== -->
   <div id="profile-modal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 overflow-y-auto">
     <div class="fixed inset-0 bg-black/70 backdrop-blur-sm transition-opacity" id="profile-modal-backdrop"></div>
@@ -959,7 +973,7 @@
   </div>
 
   <!-- ======================================================== -->
-  <!-- 6. SWAP REQUEST MODAL                                   -->
+  <!-- SWAP REQUEST MODAL                                       -->
   <!-- ======================================================== -->
   <div id="swap-request-modal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 overflow-y-auto">
     <div class="fixed inset-0 bg-black/70 backdrop-blur-sm transition-opacity" id="swap-modal-backdrop"></div>
@@ -972,7 +986,7 @@
   </div>
 
   <!-- ======================================================== -->
-  <!-- 13. TOAST NOTIFICATIONS CONTAINER                       -->
+  <!-- TOAST NOTIFICATIONS CONTAINER                            -->
   <!-- ======================================================== -->
   <div id="toast-container" class="fixed bottom-4 right-4 z-50 flex flex-col gap-2 pointer-events-none max-w-sm w-full px-3 sm:px-0"></div>
 
