@@ -453,22 +453,22 @@ function renderStudents(customList = null) {
     const initials = student.name.split(' ').map(n => n[0]).join('').substring(0, 2);
 
     return `
-      <div class="saas-card p-4 sm:p-5 flex flex-col justify-between" data-student-id="${student.id}">
+      <div class="saas-card p-4 sm:p-5 h-full flex flex-col justify-between" data-student-id="${student.id}">
         
-        <div>
+        <div class="flex-1 flex flex-col">
           <!-- Header: Avatar, Name, Rating -->
           <div class="flex items-start justify-between gap-3 mb-3.5">
-            <div class="flex items-center gap-2.5">
+            <div class="flex items-center gap-2.5 min-w-0">
               <div class="w-8 h-8 rounded bg-[#161D2E] text-slate-200 border border-[#1E2638] font-mono text-xs font-bold flex items-center justify-center shrink-0">
                 ${initials}
               </div>
-              <div>
-                <h4 class="font-semibold text-white text-sm leading-tight">${student.name}</h4>
-                <p class="text-[11px] text-slate-400 font-mono mt-0.5">${student.branch || 'Campus Student'}</p>
+              <div class="min-w-0">
+                <h4 class="font-semibold text-white text-sm leading-tight truncate">${student.name}</h4>
+                <p class="text-[11px] text-slate-400 font-mono mt-0.5 truncate">${student.branch || 'Campus Student'}</p>
               </div>
             </div>
 
-            <div class="flex flex-col items-end">
+            <div class="flex flex-col items-end shrink-0">
               <span class="text-xs font-mono text-slate-300 bg-[#161D2E] px-1.5 py-0.5 rounded border border-[#1E2638]">
                 ★ ${student.rating.toFixed(1)}
               </span>
@@ -484,33 +484,33 @@ function renderStudents(customList = null) {
                 ${student.level}
               </span>
             </div>
-            <p class="text-xs font-semibold text-white">${student.teaches}</p>
+            <p class="text-xs font-semibold text-white truncate">${student.teaches}</p>
           </div>
 
           <!-- Wants to Learn Box -->
           <div class="p-2.5 rounded-lg bg-[#161D2E] border border-[#1E2638] mb-3">
             <div class="flex items-center justify-between text-[11px] mb-0.5">
               <span class="font-mono text-slate-400 uppercase font-semibold text-[10px]">Wants to Learn</span>
-              <span class="text-[10px] font-mono text-slate-500">
+              <span class="text-[10px] font-mono text-slate-500 truncate">
                 ${student.category}
               </span>
             </div>
-            <p class="text-xs font-medium text-slate-200">${student.wants}</p>
+            <p class="text-xs font-medium text-slate-200 truncate">${student.wants}</p>
           </div>
 
-          <!-- Bio -->
-          <p class="text-xs text-slate-400 line-clamp-2 mb-2 leading-relaxed">
+          <!-- Bio (Guaranteed 2 lines height) -->
+          <p class="text-xs text-slate-400 line-clamp-2 h-9 mb-2 leading-relaxed">
             "${student.bio}"
           </p>
 
           <!-- Availability -->
-          <div class="text-[11px] text-slate-500 font-mono mb-4">
+          <div class="text-[11px] text-slate-500 font-mono mb-4 truncate">
             Avail: ${student.availability}
           </div>
         </div>
 
-        <!-- Actions -->
-        <div class="pt-3 border-t border-[#1E2638] flex items-center gap-2">
+        <!-- Actions (Pinned to bottom) -->
+        <div class="mt-auto pt-3 border-t border-[#1E2638] flex items-center gap-2">
           <button 
             type="button" 
             onclick="showProfileModal('${student.id}')"
@@ -719,10 +719,10 @@ function renderPerfectMatchCard(matchObj, userTeachSkill, userLearnSkill) {
 
   return `
     <div class="saas-card p-5 sm:p-6 border-sky-500/30 bg-[#111622]">
-      <div class="flex flex-col lg:flex-row items-center justify-between gap-4 mb-4">
+      <div class="grid grid-cols-1 lg:grid-cols-11 gap-4 items-center mb-4">
         
         <!-- Left: YOU -->
-        <div class="w-full lg:w-5/12 bg-[#161D2E] rounded-lg p-3.5 border border-[#1E2638]">
+        <div class="lg:col-span-5 h-full flex flex-col justify-between bg-[#161D2E] rounded-lg p-3.5 border border-[#1E2638]">
           <div class="flex items-center gap-2 mb-2">
             <span class="w-6 h-6 rounded bg-[#111622] text-slate-300 font-mono text-xs font-bold flex items-center justify-center border border-[#1E2638]">YOU</span>
             <span class="font-semibold text-white text-xs">Your Proposal</span>
@@ -734,17 +734,17 @@ function renderPerfectMatchCard(matchObj, userTeachSkill, userLearnSkill) {
         </div>
 
         <!-- Center: Match Badge -->
-        <div class="flex flex-col items-center justify-center text-center px-2">
-          <div class="w-8 h-8 rounded bg-[#161D2E] border border-[#1E2638] text-sky-400 font-mono font-bold flex items-center justify-center text-sm">
+        <div class="lg:col-span-1 flex flex-col items-center justify-center text-center py-1 lg:py-0">
+          <div class="w-8 h-8 rounded-lg bg-[#161D2E] border border-[#1E2638] text-sky-400 font-mono font-bold flex items-center justify-center text-sm shadow-sm">
             ⇄
           </div>
-          <span class="mt-1 text-[11px] font-mono font-bold text-sky-400">
+          <span class="mt-1 text-[11px] font-mono font-bold text-sky-400 whitespace-nowrap">
             ${score}% MATCH
           </span>
         </div>
 
         <!-- Right: MATCHED STUDENT -->
-        <div class="w-full lg:w-5/12 bg-[#161D2E] rounded-lg p-3.5 border border-[#1E2638]">
+        <div class="lg:col-span-5 h-full flex flex-col justify-between bg-[#161D2E] rounded-lg p-3.5 border border-[#1E2638]">
           <div class="flex items-center justify-between mb-2">
             <div class="flex items-center gap-2">
               <span class="w-6 h-6 rounded bg-[#111622] text-slate-300 font-mono text-xs font-bold flex items-center justify-center border border-[#1E2638]">${initials}</span>
@@ -768,7 +768,7 @@ function renderPerfectMatchCard(matchObj, userTeachSkill, userLearnSkill) {
           <button 
             type="button" 
             onclick="showProfileModal('${s.id}')"
-            class="px-3 py-1.5 rounded-lg bg-[#161D2E] hover:bg-[#1C253B] text-slate-300 text-xs font-medium border border-[#1E2638] transition-colors"
+            class="px-3.5 py-1.5 rounded-lg bg-[#161D2E] hover:bg-[#1C253B] text-slate-300 text-xs font-medium border border-[#1E2638] transition-colors"
           >
             Profile
           </button>
@@ -791,41 +791,41 @@ function renderOneWayMatchCard(matchObj, userTeachSkill, userLearnSkill) {
   const initials = s.name.split(' ').map(n => n[0]).join('').substring(0, 2);
 
   return `
-    <div class="saas-card p-3.5 flex flex-col justify-between">
-      <div>
+    <div class="saas-card p-4 flex flex-col justify-between h-full">
+      <div class="flex-1 flex flex-col">
         <div class="flex items-center justify-between mb-2">
-          <div class="flex items-center gap-2">
-            <div class="w-6 h-6 rounded bg-[#161D2E] text-slate-300 font-mono text-xs font-bold flex items-center justify-center border border-[#1E2638]">
+          <div class="flex items-center gap-2 min-w-0">
+            <div class="w-6 h-6 rounded bg-[#161D2E] text-slate-300 font-mono text-xs font-bold flex items-center justify-center border border-[#1E2638] shrink-0">
               ${initials}
             </div>
-            <div>
-              <p class="font-semibold text-white text-xs">${s.name}</p>
-              <p class="text-[10px] text-slate-500 font-mono">${s.branch}</p>
+            <div class="min-w-0">
+              <p class="font-semibold text-white text-xs truncate">${s.name}</p>
+              <p class="text-[10px] text-slate-500 font-mono truncate">${s.branch}</p>
             </div>
           </div>
-          <span class="px-1.5 py-0.2 rounded bg-[#161D2E] text-slate-300 border border-[#1E2638] font-mono text-[10px]">
+          <span class="px-1.5 py-0.5 rounded bg-[#161D2E] text-slate-300 border border-[#1E2638] font-mono text-[10px] shrink-0">
             ${score}%
           </span>
         </div>
 
-        <div class="p-2 rounded bg-[#161D2E] text-[11px] font-mono space-y-0.5 mb-2">
+        <div class="p-2.5 rounded bg-[#161D2E] text-[11px] font-mono space-y-1 mb-2 mt-auto">
           <p class="text-slate-400">Teaches: <strong class="text-sky-400">${s.teaches}</strong></p>
           <p class="text-slate-400">Wants: <strong class="text-slate-200">${s.wants}</strong></p>
         </div>
       </div>
 
-      <div class="pt-2 border-t border-[#1E2638] flex items-center gap-2">
+      <div class="mt-auto pt-2.5 border-t border-[#1E2638] flex items-center gap-2">
         <button 
           type="button" 
           onclick="showProfileModal('${s.id}')"
-          class="flex-1 py-1 rounded bg-[#161D2E] hover:bg-[#1C253B] text-slate-300 text-xs font-medium transition-colors text-center"
+          class="flex-1 py-1.5 rounded-lg bg-[#161D2E] hover:bg-[#1C253B] text-slate-300 hover:text-white text-xs font-medium border border-[#1E2638] transition-colors text-center"
         >
           Profile
         </button>
         <button 
           type="button" 
           onclick="openSwapModal('${s.id}', '${userTeachSkill}', '${userLearnSkill}')"
-          class="flex-1 py-1 rounded bg-sky-600 hover:bg-sky-500 text-white text-xs font-medium transition-colors text-center shadow-sm"
+          class="flex-1 py-1.5 rounded-lg bg-sky-600 hover:bg-sky-500 text-white text-xs font-medium transition-colors text-center shadow-sm"
         >
           Request
         </button>
@@ -1120,16 +1120,16 @@ function renderTrendingSkills() {
 
     return `
       <div 
-        class="p-2.5 rounded-lg bg-[#161D2E] border border-[#1E2638] hover:border-slate-700 cursor-pointer transition-colors"
+        class="p-2.5 rounded-lg bg-[#161D2E] border border-[#1E2638] hover:border-slate-700 cursor-pointer transition-colors h-[52px] flex flex-col justify-center"
         onclick="quickSelectTrendingSkill('${item.name}')"
         title="Find matches for ${item.name}"
       >
         <div class="flex items-center justify-between mb-1.5 text-xs">
-          <div class="flex items-center gap-1.5 font-mono">
-            <span class="text-slate-500 font-bold">#${index + 1}</span>
-            <span class="font-medium text-white">${item.name}</span>
+          <div class="flex items-center gap-1.5 font-mono min-w-0">
+            <span class="text-slate-500 font-bold shrink-0">#${index + 1}</span>
+            <span class="font-medium text-white truncate">${item.name}</span>
           </div>
-          <span class="text-[11px] text-slate-400 font-mono">
+          <span class="text-[11px] text-slate-400 font-mono shrink-0 ml-2">
             ${item.count} ${item.count === 1 ? 'student' : 'students'}
           </span>
         </div>
@@ -1176,22 +1176,22 @@ function renderLeaderboard() {
     const initials = s.name.split(' ').map(n => n[0]).join('').substring(0, 2);
 
     return `
-      <div class="p-2.5 rounded-lg bg-[#161D2E] border border-[#1E2638] flex items-center justify-between gap-3 text-xs">
-        <div class="flex items-center gap-2.5">
-          <span class="w-5 text-center font-mono font-bold text-slate-400">#${index + 1}</span>
+      <div class="p-2.5 rounded-lg bg-[#161D2E] border border-[#1E2638] flex items-center justify-between gap-3 text-xs h-[52px]">
+        <div class="flex items-center gap-2.5 min-w-0">
+          <span class="w-4 text-center font-mono font-bold text-slate-400 shrink-0">#${index + 1}</span>
 
-          <div class="w-7 h-7 rounded bg-[#111622] text-slate-300 font-mono text-[10px] font-bold flex items-center justify-center border border-[#1E2638]">
+          <div class="w-7 h-7 rounded bg-[#111622] text-slate-300 font-mono text-[10px] font-bold flex items-center justify-center border border-[#1E2638] shrink-0">
             ${initials}
           </div>
 
-          <div>
-            <h5 class="font-semibold text-white text-xs">${s.name}</h5>
-            <p class="text-[10px] text-slate-400 font-mono">Teaches: ${s.teaches}</p>
+          <div class="min-w-0">
+            <h5 class="font-semibold text-white text-xs truncate">${s.name}</h5>
+            <p class="text-[10px] text-slate-400 font-mono truncate">Teaches: ${s.teaches}</p>
           </div>
         </div>
 
-        <div class="flex items-center gap-3 font-mono">
-          <span class="text-white">${s.swaps} <span class="text-slate-500 text-[10px]">swaps</span></span>
+        <div class="flex items-center gap-2.5 font-mono shrink-0">
+          <span class="text-white text-xs">${s.swaps} <span class="text-slate-500 text-[10px]">swaps</span></span>
           <span class="text-slate-400 text-[11px]">★ ${s.rating.toFixed(1)}</span>
         </div>
       </div>
