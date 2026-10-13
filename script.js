@@ -1,7 +1,6 @@
 /**
  * SkillSwap — Student-to-Student College Skill Exchange Platform
  * Architecture: JavaScript
- * Vi
  */
 
 // ========================================================
