@@ -1,7 +1,7 @@
 /**
  * SkillSwap — Student-to-Student College Skill Exchange Platform
- * Architecture: Pure Vanilla JavaScript
- * Visual Theme: Linear / Vercel Minimalist SaaS Aesthetic
+ * Architecture: JavaScript
+ * Vi
  */
 
 // ========================================================
